@@ -103,11 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Rest Framework configurations
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        ''
-    ]
-}
+REST_FRAMEWORK = {}
 
 
 # Internationalization
