@@ -36,6 +36,9 @@ class Register(APIView):
             password=password
         )
 
+        # Set password
+        new_user.set_password(password)
+
         # Save
         new_user.save()
 
