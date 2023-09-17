@@ -4,8 +4,11 @@ from django.core.exceptions import FieldDoesNotExist, ValidationError, ObjectDoe
 from django.contrib.auth.models import User
 from django.db.models import Q
 from knox.models import AuthToken
+from rest_framework.permissions import AllowAny
 
 class Register(APIView):
+
+    permission_classes = (AllowAny,)
 
     def post(self, request: HttpRequest):
         """
@@ -55,6 +58,8 @@ class Register(APIView):
 
 # Login class
 class Login(APIView):
+
+    permission_classes = (AllowAny,)
 
     def post(self, request: HttpRequest) -> JsonResponse:
         """
