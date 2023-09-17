@@ -1,7 +1,7 @@
 from django.urls import path
-from .api import Register
+from .api import ChatView
 
 appname = "api"
 urlpatterns = [
-    #path("register", Register.as_view(), name="register")
+    path("chatview/", ChatView.as_view(), name="register")
 ]
