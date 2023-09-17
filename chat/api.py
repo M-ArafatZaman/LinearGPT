@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 class ChatView(views.APIView):
     authentication_classes = [TokenAuthentication]
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,) 
 
     def get(self, request: HttpRequest):
         return JsonResponse({
